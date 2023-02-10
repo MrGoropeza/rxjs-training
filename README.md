@@ -1,27 +1,49 @@
-# RxjsTraining
+# RxJS Training
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.10.
+Repo para practicar RxJS
 
-## Development server
+# Arquitectura
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+src/
+└── app/
+    ├── feature1/
+    │   ├── data-access
+    │   ├── feature/
+    │   │   └── feature1-shell
+    │   ├── ui
+    │   └── utils
+    ├── feature2/
+    │   ├── data-access
+    │   ├── feature/
+    │   │   └── feature2-shell
+    │   ├── ui
+    │   └── utils
+    ├── shared/
+    │   ├── data-access
+    │   └── ui
+    └── home/
+        ├── data-access
+        └── feature/
+            ├── home.html
+            ├── home.scss
+            ├── home.ts
+            ├── home.module.ts
+            └── home-routing.module.ts
 
-## Code scaffolding
+- "feature-name": carpeta para colocar todo el codigo relacionado a una funcionalidad de la aplicacion
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+  - data-access: carpeta para poner codigo el cual se comunica con data externa (generalmente servicios o stores)
+  - feature: carpeta para poner "Smart Components"
+    - "feature-name"-shell: carpeta para manejar el routing de la feature actual.
+  - ui: carpeta para poner "Dumb Components"
+  - utils: carpeta para colocar cualquier utilidad para la feature actual
 
-## Build
+- shared: carpeta para poner codigo que varias features comparten
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+  - ui: carpeta para poner componentes, directivas, pipes, etc.
 
-## Running unit tests
+- home: carpeta para poner codigo del componente inicial de la app
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Todos los componentes, directivas, pipes, etc, deben utilizar el patron SCAM (Single Component Angular Module). A partir de Angular v15+, se reemplazarian los SCAMs con Standalone Components.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+En el app.routing hacemos lazy loading con los Shells Modules.
