@@ -42,7 +42,7 @@ src/
 
   - ui: carpeta para poner componentes, directivas, pipes, etc.
 
-- home: carpeta para poner codigo del componente inicial de la app
+- home: como la feature "home" no posee multiples rutas, no es necesario usar el "home-shell"
 
 Todos los componentes, directivas, pipes, etc, deben utilizar el patron SCAM (Single Component Angular Module). A partir de Angular v15+, se reemplazarian los SCAMs con Standalone Components.
 
