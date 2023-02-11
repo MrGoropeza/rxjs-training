@@ -1,12 +1,7 @@
 <mat-toolbar>
-    <button mat-icon-button [matMenuTriggerFor]="menu">
-      <mat-icon>menu</mat-icon>
-    </button>
+  <button mat-icon-button (click)="menuClick.emit()">
+    <mat-icon>menu</mat-icon>
+  </button>
 
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item>Item 1</button>
-      <button mat-menu-item>Item 2</button>
-    </mat-menu>
-
-    <span>RxJS Training App</span>
+  <span style="margin: 0 1rem;">RxJS Training App</span>
 </mat-toolbar>

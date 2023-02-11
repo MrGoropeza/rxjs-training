@@ -1,0 +1,14 @@
+.tree {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+/*
+ * Padding for leaf nodes.
+ * Leaf nodes need to have padding so as to align with other non-leaf nodes
+ * under the same parent.
+ */
+.tree div[role="group"] > .mat-tree-node,
+.tree .mat-nested-tree-node div[role="group"] {
+  padding-left: 20px;
+}

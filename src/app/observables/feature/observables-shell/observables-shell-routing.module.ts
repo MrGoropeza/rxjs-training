@@ -3,14 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'observer',
+    path: `observer`,
     loadChildren: () =>
-      import('../observer/observer.module').then((m) => m.ObserverModule),
-  },
-  {
-    path: '',
-    pathMatch: 'full',
-    redirectTo: 'observer',
+      import(`../observer/observer.module`).then((m) => m.ObserverModule),
   },
 ];
 
