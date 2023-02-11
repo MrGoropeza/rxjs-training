@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import { BehaviorSubject, EMPTY, interval, switchMap } from 'rxjs';
+import { Injectable } from "@angular/core";
+import { BehaviorSubject, EMPTY, interval, switchMap } from "rxjs";
 
 @Injectable()
 export class TickrateService {
