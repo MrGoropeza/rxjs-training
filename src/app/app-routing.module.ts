@@ -3,10 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '',
+    path: ``,
     loadChildren: () =>
       import(
-        './observables/feature/observables-shell/observables-shell.module'
+        `./observables/feature/observables-shell/observables-shell.module`
       ).then((m) => m.ObservablesShellModule),
   },
 ];
