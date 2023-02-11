@@ -4,15 +4,4 @@ export interface MenuItem {
   children?: MenuItem[];
 }
 
-export const MENU_CONFIG: MenuItem[] = [
-  {
-    name: `Observables`,
-    routerLink: ``,
-    children: [
-      {
-        name: `Observer`,
-        routerLink: `observer`,
-      },
-    ],
-  },
-];
+export const MENU_CONFIG: MenuItem[] = [];
