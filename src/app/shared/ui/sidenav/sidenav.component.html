@@ -1,4 +1,17 @@
-<mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="tree">
+<div class="my-2 flex justify-center">
+  <img
+    src="https://rxjs.dev/generated/images/marketing/home/Rx_Logo-512-512.png"
+    width="100px"
+  />
+</div>
+
+<mat-divider></mat-divider>
+
+<mat-tree
+  [dataSource]="dataSource"
+  [treeControl]="treeControl"
+  class="tree mx-4 my-2"
+>
   <!-- Leafs -->
   <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle>
     <button mat-flat-button [routerLink]="node.routerLink">
