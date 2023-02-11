@@ -7,6 +7,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('../observer/observer.module').then((m) => m.ObserverModule),
   },
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'observer',
+  },
 ];
 
 @NgModule({

@@ -1,14 +1,7 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
 import { ObservablesShellRoutingModule } from './observables-shell-routing.module';
 
-
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule,
-    ObservablesShellRoutingModule
-  ]
+  imports: [ObservablesShellRoutingModule],
 })
-export class ObservablesShellModule { }
+export class ObservablesShellModule {}

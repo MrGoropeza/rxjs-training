@@ -1,0 +1,14 @@
+.page {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+.page .header {
+  flex: 0 1 40px;
+}
+
+.page .content {
+  border-radius: 0;
+  flex: 1 1 auto;
+}
