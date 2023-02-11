@@ -1,7 +1,7 @@
 import { NestedTreeControl } from "@angular/cdk/tree";
 import { Component, OnInit } from "@angular/core";
 import { MatTreeNestedDataSource } from "@angular/material/tree";
-import { MenuItem, MENU_CONFIG } from "../utils/menu.config";
+import { MenuItem, MENU_CONFIG } from "../../utils/menu.config";
 
 @Component({
   selector: "app-sidenav",
