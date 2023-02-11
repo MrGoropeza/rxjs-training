@@ -3,5 +3,26 @@
     <mat-icon>menu</mat-icon>
   </button>
 
-  <span style="margin: 0 1rem;">RxJS Training App</span>
+  <span class="mx-4 grow">RxJS Training App</span>
+
+  <mat-slider
+    color="primary"
+    [displayWith]="formatLabel"
+    (input)="constantEmitterService.setTickrate($event.value!)"
+    [value]="constantEmitterService.tickrate$.value"
+    [max]="5"
+    [step]="0.1"
+    thumbLabel
+    tickInterval="1"
+  ></mat-slider>
+
+  <button
+    mat-icon-button
+    class="ml-2 transition-transform"
+    [ngClass]="{
+      'rotate-180': iconToggler$ | async
+    }"
+  >
+    <mat-icon> hourglass_top </mat-icon>
+  </button>
 </mat-toolbar>
