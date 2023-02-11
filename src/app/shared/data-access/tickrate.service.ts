@@ -5,12 +5,7 @@ import { BehaviorSubject, EMPTY, interval, switchMap } from 'rxjs';
 export class TickrateService {
   tickrate$ = new BehaviorSubject<number>(0.5);
   constantEmitter$ = this.tickrate$.pipe(
-    switchMap((tickrate) => {
-      if (tickrate === 0) {
-        return EMPTY;
-      }
-      return interval(1000 * tickrate);
-    })
+    switchMap((tickrate) => (tickrate ? interval(1000 * tickrate) : EMPTY))
   );
 
   setTickrate(value: number) {
