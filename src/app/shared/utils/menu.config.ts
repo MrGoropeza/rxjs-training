@@ -4,4 +4,9 @@ export interface MenuItem {
   children?: MenuItem[];
 }
 
-export const MENU_CONFIG: MenuItem[] = [];
+export const MENU_CONFIG: MenuItem[] = [
+  {
+    name: "Music Player",
+    routerLink: "music-player",
+  },
+];

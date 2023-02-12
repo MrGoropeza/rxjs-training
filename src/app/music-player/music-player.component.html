@@ -1,0 +1,24 @@
+<div class="max-w-max rounded-xl bg-slate-800 p-2 shadow-2xl">
+  <div
+    class="box-border flex flex-col items-center rounded-xl border-[1rem] border-slate-700 bg-slate-600"
+  >
+    <div class="flex w-full items-center justify-between bg-black p-1">
+      <span>005/256</span>
+      <mat-icon class="-rotate-90">battery_5_bar</mat-icon>
+    </div>
+    <mat-icon class="playing">album</mat-icon>
+
+    <span>2:00/5:00</span>
+    <mat-slider [disabled]="true" [value]="30" color="accent"></mat-slider>
+  </div>
+
+  <button mat-raised-button class="aspect-square">
+    <mat-icon>album</mat-icon>
+  </button>
+  <button mat-raised-button class="aspect-square">
+    <mat-icon>play_arrow</mat-icon>
+  </button>
+  <button mat-raised-button class="aspect-square">
+    <mat-icon>audio_file</mat-icon>
+  </button>
+</div>
