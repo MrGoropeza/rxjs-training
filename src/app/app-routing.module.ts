@@ -9,6 +9,13 @@ const routes: Routes = [
         (m) => m.MusicPlayerModule
       ),
   },
+  {
+    path: "operators",
+    loadChildren: () =>
+      import("./operators/feature/operators-shell/operators-shell.module").then(
+        (m) => m.OperatorsShellModule
+      ),
+  },
 ];
 
 @NgModule({

@@ -1,0 +1,37 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Fruits Array</mat-card-title>
+  </mat-card-header>
+  <div class="flex flex-wrap justify-around gap-2">
+    <mat-card *ngFor="let fruit of fruits">
+      <mat-card-header>
+        <div mat-card-avatar class="text-4xl">{{ fruit.icon }}</div>
+        <mat-card-title class="mb-0">
+          {{ fruit.name | titlecase }}
+        </mat-card-title>
+        <mat-icon>
+          {{ fruit.isFresh ? "thumb_up" : "thumb_down" }}
+        </mat-icon>
+      </mat-card-header>
+    </mat-card>
+  </div>
+</mat-card>
+
+<mat-card class="mt-4">
+  <mat-card-header>
+    <mat-card-title>Fruit Observable</mat-card-title>
+  </mat-card-header>
+  <mat-card class="mt-2 bg-blue-900">
+    <mat-card-header *ngIf="emittedFruit$ | async">
+      <div mat-card-avatar class="text-4xl">
+        {{ (emittedFruit$ | async)!.icon }}
+      </div>
+      <mat-card-title class="mb-0">
+        {{ (emittedFruit$ | async)!.name | titlecase }}
+      </mat-card-title>
+      <mat-icon>
+        {{ (emittedFruit$ | async)!.isFresh ? "thumb_up" : "thumb_down" }}
+      </mat-icon>
+    </mat-card-header>
+  </mat-card>
+</mat-card>
